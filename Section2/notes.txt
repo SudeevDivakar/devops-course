@@ -1,0 +1,29 @@
+Prereqs and commands to install them:
+
+Windows:
+-> choco install virtualbox --version=7.2.6 -y
+-> choco install vagrant --version=2.4.9 -y
+-> choco install git -y
+-> choco install corretto17jdk -y
+-> choco install maven -y
+-> choco install awscli -y
+-> choco install intellijidea-community -y
+-> choco install vscode -y
+-> choco install sublimetext3 -y
+
+MAC:
+-> echo -k > ~/.curlrc
+-> cat ~/.curlrc
+-> brew install --cask virtualbox
+-> brew install --cask vagrant
+-> brew install --cask vagrant-manager
+-> brew install git
+-> brew install openjdk@17
+-> sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+-> exec zsh -l
+-> brew install maven
+-> brew install --cask visual-studio-code
+-> brew install --cask intellij-idea
+-> brew install --cask intellij-idea-ce
+-> brew install --cask sublime-text
+-> brew install awscli
