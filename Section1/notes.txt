@@ -1,0 +1,32 @@
+SDLC (Software Development Lifecycle):
+-> Requirement gathering
+-> Planning
+-> Designing
+-> Development
+-> Testing
+-> Deploy and Maintain
+
+
+SDLC MODELS:
+-> Waterfall, Agile, Spiral, Big Bang, etc.
+-> Choice of SDLC model depends on factors like cost, risk and time available
+
+
+CONTINUOUS INTEGRATION:
+-> Automated process in devops which generates software and it's features efficiently
+-> Code managed through github.
+-> Multiple code changes are made throughout the day.
+-> Code is moved to build servers where it is built, tested and evaluated and an artifact is created at this stage.
+-> Artifacts are an archive of files generated from the build process and the format it is packaged in depends on the programming language.
+-> Artifacts are stored in artifact repositories.
+-> Artifacts are then shifted to servers for testing by the qa team and once approved it's shipped to production envs.
+-> Continuous integration is the process of automating the build process after every commit (to a specific branch ideally) so that any bugs in code are caught pretty early rather than later when it could be harder to fix.
+-> The goal of CI is to detect defects at an early stage so that it does not multiply.
+
+
+CONTINUOUS DELIVERY:
+-> Automated process of delivering code changes to servers quickly and efficiently at an enormous phase.
+-> A deployment can have steps like server provisioning, dependency changes, conf changes, network changes, artifact deploy and many other steps
+-> Some tools for automation are - ansible, puppet, chef, terraform, cloudformation, jenkins, helm, etc.
+-> Testing like functional, load, performance, DB, security, etc also need to be automated.
+
