@@ -1,0 +1,99 @@
+VIRTUAL MACHINES:
+-> A computer inside your computer
+-> We can create multiple VMs, install operating systems and connect them together
+
+
+LIFE BEFORE VIRTUALIZATION:
+-> To run app / services we need servers
+-> Physical computers (servers in datacenter)
+-> One Service - One Server (Not putting all your eggs into a single basket) (Isolation)
+-> Servers are always overprovisioned and the resources are mostly underutilized
+-> Huge capital expenditure and Operational expenditure
+
+
+VIRTUALIZATION:
+-> Allows a single computer to run multiple OS.
+-> Virtualization involves partitioning your physical resources into virtual resources
+-> Virtual machines run in isolated envs
+-> Each virtual machine needs it's own OS
+-> Server virtualization is the most common type of virtualization. (Other types are network, storage, etc.)
+
+
+TERMINOLOGIES:
+-> Host OS - Operation system of the physical system (Operating system of the laptop for example)
+-> Guest OS - Operating system of the virtual machine. Virtual machines are sometimes referred to as the guest machines.
+-> VM - Virtual machine
+-> Snapshot - Backups of virtual machines (set of files taken at some point in time)
+-> Hypervisor - Tool that enables us to create virtual machines (Enables virtualization)
+
+
+TYPES OF HYPERVISOR:
+1. Type 1
+-> Bare metal hypervisor
+-> Runs directly on the physical computer like an OS
+-> Only for production and doesn't let you use this computer for other purposes
+-> e.g VMware esxi, Xen Hypervisor
+2. Type 2
+-> Runs as a software
+-> Used mainly for learning and testing
+-> e.g Oracle virtualbox, Vmware server
+
+
+TYPE 1 DIAGRAM:
+<-App-->  <-App-->  <-App-->
+<--OS-->  <--OS-->  <--OS-->
+<--VM-->  <--VM-->  <--VM-->
+
+<--------Hypervisor-------->
+<---------HARDWARE--------->
+
+
+TYPE 2 DIAGRAM:
+              <-App-->    <-App-->    <-App-->
+              <--OS-->    <--OS-->    <--OS-->
+              <--VM-->    <--VM-->    <--VM-->
+
+<---Apps-->   <---Hypervisor (on Native OS)-->
+<----------Native Operating System----------->
+<------------HARDWARE------------------------>
+
+
+VAGRANT:
+-> VM automation tool
+-> Manages creation, changes and cleaning up of VMs
+-> Does not replace any hypervisor, it is built on top of them to create and manage VMs
+
+
+VM MANAGEMENT PROBLEM:
+-> OS installation has many steps
+-> Time consuming especially if we need to create multiple VMs
+-> Manual creation has chances of human errors
+-> VMs are tough to replicate especially if we need to do it on other computers
+-> Need to document entire setup
+
+
+VAGRANT FOR VMs:
+-> No OS installation since vagrant uses VM images/box which are freely available on the vagrant cloud.
+-> All VM settings are present on a Vagrantfile. All the VM settings are present in this file. Any required changes and provisioning of anything required on the VM are carried out using this Vagrantfile.
+-> Simple commands:
+   vagrant init <boxname> => Creates a Vagrantfile with the VM image from Vagrant cloud
+   vagrant up => Starts the VM 
+   vagrant ssh => Login to the VM
+   vagrant halt => Stop the VM
+   vagrant destroy => Destroy the created VM
+
+
+NOTE: While using vagrant, make sure VPN is off and antivirus are disabled
+
+
+VAGRANT COMMANDS:
+-> vagrant init <boxname> => Creates a Vagrantfile with the VM image from Vagrant cloud
+-> vagrant up => Starts the VM 
+-> vagrant ssh => Login to the VM
+-> vagrant halt => Stop the VM
+-> vagrant destroy => Destroy the created VM
+-> vagrant box list => Shows downloaded boxes
+-> vagrant status => Shows the status of the running VM
+-> vagrant global-status => Shows status of all vagrant servers
+-> vagrant gloabl-status --prune => Cleanup VMs which you can see through vagrant but not VirtualBox
+
