@@ -89,6 +89,7 @@ NOTE: While using vagrant, make sure VPN is off and antivirus are disabled
 VAGRANT COMMANDS:
 -> vagrant init <boxname> => Creates a Vagrantfile with the VM image from Vagrant cloud
 -> vagrant up => Starts the VM 
+-> vagrant reload => Reboot the VM and also reads the Vagrantfile for any new config updates and applies them. Does not change box name - if box name tries to be changed then it will destroy and recreate the VM. 
 -> vagrant ssh => Login to the VM
 -> vagrant halt => Stop the VM
 -> vagrant destroy => Destroy the created VM
